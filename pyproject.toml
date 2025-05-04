@@ -1,0 +1,10 @@
+[project]
+name = "civil-test"
+version = "0.1.0"
+description = "A tool for calculating the eigenfrequency of beams with different supports.1"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]>=1.7.1",
+    "pydantic>=2.11.4",
+]
