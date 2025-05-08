@@ -106,3 +106,24 @@ $$
 \end{bmatrix}
 \end{align*}
 $$
+
+$$
+\kappa_i = \frac{k_il^3}{EI} \qquad \gamma_i = \frac{c_il}{EI} \qquad \varepsilon = \lambda l
+$$
+
+$$
+\begin{align*}
+\begin{bmatrix}
+    \kappa_0 & -\varepsilon^3 & \kappa_0 & \varepsilon^3 \\
+    -\varepsilon & \gamma_0 & \varepsilon & \gamma_0 \\
+    -\varepsilon^3\sh(\varepsilon) + \kappa_1 \ch(\varepsilon) & -\varepsilon^3\ch(\varepsilon) + \kappa_1 \sh(\varepsilon) & -\varepsilon^3\sin(\varepsilon) + \kappa_1 \cos(\varepsilon) & \varepsilon^3\cos(\varepsilon) + \kappa_1 \sin(\varepsilon) \\
+    -\varepsilon\ch(\varepsilon) + \gamma_1 \sh(\varepsilon) & - \varepsilon\sh(\varepsilon) + \gamma_1 \ch(\varepsilon) & \varepsilon\cos(\varepsilon) - \gamma_1 \sin(\varepsilon) & \varepsilon\sin(\varepsilon) + \gamma_1 \cos(\varepsilon)
+\end{bmatrix} \cdot 
+\begin{bmatrix}
+    A \\ B \\ C \\ D
+\end{bmatrix} = 
+\begin{bmatrix}
+    0 \\ 0 \\ 0 \\ 0
+\end{bmatrix}
+\end{align*}
+$$
