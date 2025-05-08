@@ -5,6 +5,8 @@ description = "A tool for calculating the eigenfrequency of beams with different
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "matplotlib>=3.10.1",
     "mcp[cli]>=1.7.1",
+    "numpy>=2.2.5",
     "pydantic>=2.11.4",
 ]
