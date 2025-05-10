@@ -1,5 +1,5 @@
 from mcp.server.fastmcp import FastMCP
-from math import pi, inf
+from math import inf
 from naturalfrequency import general_beam_natural_frequency
 
 mcp = FastMCP("beam_frequency")
