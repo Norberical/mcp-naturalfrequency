@@ -2,6 +2,8 @@
 
 An [MCP (Model Context Protocol)](https://modelcontextprotocol.io/introduction)  server that provides tools for calculating the natural angular frequencies of beams with various boundary conditions and spring supports.
 
+This is a little project to learn how to use MCP-Server
+
 ## Overview
 
 This server provides two main tools for structural dynamics calculations:
@@ -17,7 +19,10 @@ This server provides two main tools for structural dynamics calculations:
 
 ### Setup
 1. Clone this repository
-2. Create enviroment and install dependencies:
+2. Create enviroment and install dependencies with `uv` ([fast Python package and project manager](https://docs.astral.sh/uv/)):
+````
+uv sync
+````
 3. Adding the Server to the `config.json` file:
 ````json
 {
@@ -79,16 +84,3 @@ The server includes input validation and will raise appropriate errors for:
 ## Integration with MCP
 
 This server uses the FastMCP framework and communicates via stdio transport. It can be integrated with any MCP-compatible client application.
-
-<!--  
-## License
-
-[Add your license information here]
-
-## Contributing
-
-[Add contribution guidelines here]
--->
-## Support
-
-For issues or questions, please [add contact information or issue tracker link]
