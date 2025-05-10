@@ -62,6 +62,7 @@ Calculates the natural angular frequency for beams with arbitrary linear and tor
 The calculations are based on the Euler-Bernoulli beam theory. The natural frequency is determined by solving the characteristic equation for the given boundary conditions.
 
 For simple beams, the frequency is calculated as:
+
 $$
 ω = \frac{λ^2}{L^2}  \sqrt{\frac{EI}{ρA}}
 $$
