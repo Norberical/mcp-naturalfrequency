@@ -85,3 +85,7 @@ The server includes input validation and will raise appropriate errors for:
 ## Integration with MCP
 
 This server uses the FastMCP framework and communicates via stdio transport. It can be integrated with any MCP-compatible client application.
+
+## Tested
+
+The server has been tested with Claude 3.7 Sonnet on Claude Desktop.
