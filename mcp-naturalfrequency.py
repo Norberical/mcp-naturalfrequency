@@ -5,7 +5,7 @@ from naturalfrequency import general_beam_natural_frequency
 mcp = FastMCP("beam_frequency")
 
 @mcp.tool()
-async def simple_beam_frquency(beamtype: str,rhoA: float,EI: 
+async def simple_beam_frequency(beamtype: str,rhoA: float,EI: 
                          float,length: float,) -> float:
     """Calcuate the natural angular frequency of a beam.
 
@@ -33,7 +33,7 @@ async def simple_beam_frquency(beamtype: str,rhoA: float,EI:
         "'simply_supported', 'popped cantilever', or 'fixed'.")
 
 @mcp.tool() 
-async def beam_frquency(rhoA: float,EI: float,length: float, 
+async def beam_frequency(rhoA: float,EI: float,length: float, 
                          linearsprings: tuple[float | str, float | str],
                          torsionalsprings: tuple[float | str, float | str]) -> float:
     """Calcuate the natural angular frequency of a beam,
