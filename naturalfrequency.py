@@ -1,8 +1,6 @@
 import numpy as np
-import matplotlib.pyplot as plt
 from numpy.linalg import det
 from math import sin, cos, sinh, cosh, inf
-import json
 
 def general_beam_natural_frequency(k_0: tuple[float,float],k_1: tuple[float,float],
                                    c_0: tuple[float,float],c_1: tuple[float,float]) -> float:
