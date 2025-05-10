@@ -1,12 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy.linalg import det
-from math import sin, cos, sinh, cosh
+from math import sin, cos, sinh, cosh, inf
+import json
 
-def general_beam_natural_frequency(k_0,k_1,c_0,c_1):
+def general_beam_natural_frequency(k_0: tuple[float,float],k_1: tuple[float,float],
+                                   c_0: tuple[float,float],c_1: tuple[float,float]) -> float:
         
     detA = lambda x: det(np.array([
-         [k_0[0], -k_0[1]*x**3, k_0[0], k_0[1]*x**3],
+        [k_0[0], -k_0[1]*x**3, k_0[0], k_0[1]*x**3],
         [-c_0[1]*x, c_0[0], c_0[1]*x, c_0[0]],
         [-k_1[1]*x**3*sinh(x)+k_1[0]*cosh(x),-k_1[1]*x**3*cosh(x)+k_1[0]*sinh(x), -k_1[1]*x**3*sin(x)+k_1[0]*cos(x), k_1[1]*x**3*cos(x)+k_1[0]*sin(x)],
         [-c_1[1]*x*cosh(x)+c_1[0]*sinh(x),-c_1[1]*x*sinh(x)+c_1[0]*cosh(x), c_1[1]*x*cos(x)-c_1[0]*sin(x), c_1[1]*x*sin(x)+c_1[0]*cos(x)]
@@ -38,10 +40,10 @@ def general_beam_natural_frequency(k_0,k_1,c_0,c_1):
     return x_a
 
 if __name__ == "__main__":
-    k_0 = [1, 0]
-    k_1 = [1, 0]
-    c_0 = [0, 1]
-    c_1 = [1, 0]
+    k_0 = (1, 1/inf)
+    k_1 = (0, 1)
+    c_0 = (1, 1/inf)
+    c_1 = (0, 1)
     
-    x_a = eigenfrequency(k_0,k_1,c_0,c_1)
+    x_a = general_beam_natural_frequency(k_0,k_1,c_0,c_1)
     print(f"Eigenfrequency: {x_a**2}")
