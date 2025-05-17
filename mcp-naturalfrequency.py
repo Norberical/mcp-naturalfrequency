@@ -44,10 +44,10 @@ async def beam_frequency(rhoA: float,EI: float,length: float,
         EI (float): Bending stiffness.
         length (float): Length of beam.
         linearsprings (tuple[float,float]): Linear springs at the beginning and end of the beam.
-            - 0 for no spring
+            - 0 for no spring (free)
             - inf for fixed end
         Torsionalsprings (tuple[float,float]): Torsional springs at the beginning and end of the beam.
-            - 0 for no spring
+            - 0 for no spring (free)
             - inf for fixed end
     """
     K1, K2 = linearsprings

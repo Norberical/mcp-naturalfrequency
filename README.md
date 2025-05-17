@@ -23,7 +23,8 @@ This server provides two main tools for structural dynamics calculations:
 ````
 uv sync
 ````
-3. Adding the Server to the `config.json` file:
+3. Adding the Server to the `config.json` of the used MCP-Client file:
+  - for MacOS
 ````json
 {
   "mcpServers": {
@@ -41,6 +42,23 @@ uv sync
   }
 }
 ````
+  - for Windows:
+````json
+{
+  "mcpServers": {
+    "naturalfrequency": {
+        "command": "uv",
+        "args": [
+            "--directory",
+            "C:\\PATH\\TO\\MCP\\SERVER\\mcp-naturalfrequency",
+            "run",
+            "mcp-naturalfrequency.py"
+        ]
+    }
+  }
+}
+````
+
 
 ## Available Tools
 
@@ -88,4 +106,6 @@ This server uses the FastMCP framework and communicates via stdio transport. It 
 
 ## Tested
 
-The server has been tested with Claude 3.7 Sonnet on Claude Desktop.
+The server has been tested with [Claude 3.7 Sonnet](https://www.anthropic.com/claude/sonnet) on [Claude Desktop](https://claude.ai/download) on a Macbook with an Apple M2 and 24GB mamory. This setup works very well.
+
+Also the server was tested with [Ollama](https://ollama.com/) and the terminal programm [oterm](https://github.com/ggozad/oterm). As model [Qwen3:4b](https://qwenlm.github.io/blog/qwen3/) was used. The system was a laptop with Windows 11, an Intel Core i7 3.40GHz and a NVIDIA GeForce GTX 1650. The setup worked but the local model where slow (because of the Hardware) and not as powerfull as Claude but for a local model with only laptop hardware it is very good.
